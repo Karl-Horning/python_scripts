@@ -4,12 +4,8 @@ import csv
 import re
 
 # Specify file location
-file_location = "/full/path/to/directory/given_names.csv"
-
-# Check if the directory exists and create it if it doesn't
-directory = os.path.dirname(file_location)
-if not os.path.exists(directory):
-    os.makedirs(directory)
+file_name = "given_names.csv"
+file_location = os.path.join(os.getcwd(), file_name)
 
 # API URL and initial parameters
 api_url = "https://en.wikipedia.org/w/api.php"
